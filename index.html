@@ -1,0 +1,120 @@
+<html><head><base href="https://cdn.jsdelivr.net/npm/"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>DebtFree Solutions - Your Path to Financial Freedom</title><style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Arial', sans-serif;
+      overflow: hidden;
+    }
+
+    .hero {
+      position: relative;
+      background-image: url('https://images.unsplash.com/photo-1541199249251-f713e6145474?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 10vh;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      transform-style: preserve-3d;
+      animation: rotate 30s linear infinite;
+      z-index: 2;
+    }
+
+    .container:hover {
+      animation-play-state: paused;
+    }
+
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      transition: transform 0.5s;
+    }
+
+    .slide:hover {
+      transform: scale(1.2);
+      z-index: 10;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .slide:nth-child(1) { transform: rotateY(0deg) translateZ(300px); }
+    .slide:nth-child(2) { transform: rotateY(60deg) translateZ(300px); }
+    .slide:nth-child(3) { transform: rotateY(120deg) translateZ(300px); }
+    .slide:nth-child(4) { transform: rotateY(180deg) translateZ(300px); }
+    .slide:nth-child(5) { transform: rotateY(240deg) translateZ(300px); }
+    .slide:nth-child(6) { transform: rotateY(300deg) translateZ(300px); }
+
+    @keyframes rotate {
+      0% { transform: perspective(1000px) rotateY(0deg); }
+      100% { transform: perspective(1000px) rotateY(360deg); }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        transform: scale(0.7);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="container">
+      <div class="slide" aria-label="Grocery Bills">
+        <img src="https://images.unsplash.com/photo-1534723452862-4c874018d66d?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80" alt="Grocery cart filled with food items, representing grocery bill stress" width="200" height="200" loading="lazy">
+      </div>
+      <div class="slide" aria-label="Student Loans">
+        <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1226&amp;q=80" alt="Stack of books with a graduation cap, symbolizing student loan debt" width="200" height="200" loading="lazy">
+      </div>
+      <div class="slide" aria-label="Car Loans">
+        <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1236&amp;q=80" alt="Car keys with price tag, representing car loan stress" width="200" height="200" loading="lazy">
+      </div>
+      <div class="slide" aria-label="Home Loans">
+        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1073&amp;q=80" alt="House with a 'For Sale' sign, representing home loan stress" width="200" height="200" loading="lazy">
+      </div>
+      <div class="slide" aria-label="Medical Bills">
+        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80" alt="Medical bill with high amount, representing medical expense stress" width="200" height="200" loading="lazy">
+      </div>
+      <div class="slide" aria-label="Credit Cards">
+        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Credit card being cut with scissors, symbolizing credit card debt management" width="200" height="200" loading="lazy">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelector('.container').addEventListener('mouseenter', function() {
+      this.style.animationPlayState = 'paused';
+    });
+
+    document.querySelector('.container').addEventListener('mouseleave', function() {
+      this.style.animationPlayState = 'running';
+    });
+  </script>
+
+</body></html>
